@@ -1,0 +1,135 @@
+headerColor = hsl(210, 80%, 50%)
+headerHeight = 40px
+
+font-sans-serif()
+	font-family 'Source Sans Pro', sans-serif
+	font-weight 300
+
+a
+	color inherit
+	text-decoration none
+
+header
+	display flex
+	align-items center
+	flex-direction row
+
+	position absolute
+	left 0
+	top 0
+	right 0
+	height headerHeight
+
+	background-color headerColor
+
+	padding 0 14px
+
+	color white
+	font-sans-serif()
+
+	> h1
+		color white
+		font-size 24px
+		line-height headerHeight
+
+	> .subtitle
+		flex-grow 1
+
+		padding 7px 8px 0
+
+		font-size 16px
+
+	> .button
+		box-sizing border-box
+
+		background linear-gradient( \
+			to bottom, \
+			hsl(120, 70%, 55%), \
+			hsl(120, 70%, 45%) \
+		)
+		border-radius 2px
+
+		padding 4px 10px
+
+		color black
+		cursor pointer
+		font-size 18px
+
+		&:active
+			background hsl(120, 70%, 45%)
+
+.editor
+	position absolute
+	left 0
+	top headerHeight
+	right 0
+	bottom 0
+
+	padding 10px 14px
+
+	> .guide
+		position absolute
+		right 0
+		top 0
+		width 300px
+
+		border-color hsl(0, 0%, 90%)
+		border-style none none solid solid
+		border-width 1px
+		border-radius 0 0 0 4px
+		//box-shadow 1px -1px 8px rgba(0, 0, 0, 0.3)
+
+		padding 6px 16px
+
+		background white
+		font-sans-serif()
+		line-height 1.2
+
+		h1
+			margin 4px 0 16px
+
+			font-size 24px
+
+		p
+			margin 0 0 8px
+
+		dl
+			> div
+				display flex
+				flex-direction row
+
+				padding 4px 0
+
+				opacity 0.3
+
+				&.available
+					opacity 1.0
+
+				dt
+					display block
+					flex-basis 60px
+					flex-grow 0
+					flex-shrink 0
+
+					font-weight 600
+
+				dd
+					display inline-block
+
+	> .line
+		display flex
+
+		font-family 'Source Code Pro', monospace
+		font-size 14px
+		line-height 1.25
+
+		.selection
+			background-color black
+			color white
+
+		.postfill
+			flex 1
+
+	> textarea
+		width 100%
+		height 100%
